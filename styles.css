@@ -1,0 +1,162 @@
+body {
+font-family: Verdana, sans-serif;
+line-height: 1.6;
+background-color: #e6f2ff;
+color: #333;
+padding: 20px;
+display: flex;
+justify-content: center;
+}
+.container {
+border: 2px solid #003366;
+background-color: #e6f2ff;
+border-radius: 10px;
+width: 800px;
+padding: 20px;
+box-sizing: border-box;
+}
+header {
+border: 2px solid #003366;
+background-color: #b3d1ff;
+border-radius: 10px;
+width: 100%;
+margin-bottom: 20px;
+padding: 20px;
+box-sizing: border-box;
+}
+nav ul {
+list-style: none;
+padding: 0;
+margin-bottom: 20px;
+}
+nav ul li {
+display: inline;
+margin-right: 10px;
+}
+a {
+text-decoration: none;
+color: #0056b3;
+padding: 5px 10px;
+border: 2px solid #004080;
+background-color: #cce0ff;
+border-radius: 4px;
+transition: background-color 0.3s, color 0.3s;
+}
+a:hover, a:focus {
+background-color: white;
+color: #003366;
+outline: none;
+}
+.text-link {
+text-decoration: underline;
+color: #0056b3;
+padding: 0;
+border: none;
+background: none;
+}
+.text-link:hover, .text-link:focus {
+background: none;
+color: #003366;
+outline: none;
+}
+.error {
+color: red;
+font-size: 0.9em;
+}
+.accordion {
+width: 100%;
+margin-bottom: 20px;
+}
+.accordion button {
+display: flex;
+justify-content: space-between;
+width: 100%;
+text-align: left;
+background: #f1f1f1;
+border: 2px solid #004080;
+padding: 10px;
+font-size: 1em;
+cursor: pointer;
+background-color: #cce0ff;
+}
+.accordion button:focus {
+outline: 2px solid black;
+outline-offset: 2px;
+}
+.accordion button::after {
+content: '▶';
+color: #004080;
+font-weight: bold;
+}
+.accordion button[aria-expanded="true"]::after {
+content: '▼';
+}
+.accordion div {
+padding: 10px;
+border: 2px solid #004080;
+margin-top: -1px;
+background-color: #e6f2ff;
+}
+fieldset {
+border: 2px solid #003366;
+padding: 10px;
+width: 100%;
+margin-bottom: 20px;
+background-color: #e6f2ff;
+box-sizing: border-box;
+}
+legend {
+font-weight: bold;
+}
+input {
+display: block;
+margin-bottom: 10px;
+padding: 5px;
+width: 100%;
+box-sizing: border-box;
+}
+input:focus {
+outline: 2px solid black;
+outline-offset: 2px;
+}
+button[type="submit"] {
+padding: 10px 20px;
+background-color: #0056b3;
+color: white;
+border: none;
+cursor: pointer;
+}
+button[type="submit"]:focus {
+outline: 2px solid black;
+outline-offset: 2px;
+}
+h1, h2 {
+color: #004080;
+}
+p {
+margin-bottom: 20px;
+}
+img {
+max-width: 100%;
+height: auto;
+margin-bottom: 20px;
+}
+footer {
+border-top: 2px solid #003366;
+padding-top: 20px;
+margin-top: 20px;
+text-align: center;
+}
+footer nav ul {
+padding: 0;
+margin: 0;
+list-style: none;
+}
+footer nav ul li {
+display: inline;
+margin-right: 10px;
+}
+footer p {
+margin-top: 10px;
+color: #666;
+}
