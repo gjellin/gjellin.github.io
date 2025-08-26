@@ -86,3 +86,26 @@ panel.hidden = false;
 });
 });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+const winTripButton = document.getElementById('winTripButton');
+const winTripModal = document.getElementById('winTripModal');
+const modalContent = winTripModal.querySelector('.modal-content');
+// Open the modal
+winTripButton.addEventListener('click', function () {
+winTripModal.setAttribute('aria-hidden', 'false');
+modalContent.focus(); // Set focus on the modal content
+});
+// Close the modal when clicking outside the content
+winTripModal.addEventListener('click', function (event) {
+if (event.target === winTripModal) {
+winTripModal.setAttribute('aria-hidden', 'true');
+}
+});
+// Close the modal with the Escape key
+document.addEventListener('keydown', function (event) {
+if (event.key === 'Escape' && winTripModal.getAttribute('aria-hidden') === 'false') {
+winTripModal.setAttribute('aria-hidden', 'true');
+}
+});
+});
