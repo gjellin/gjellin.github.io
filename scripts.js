@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
 const form = document.getElementById('vacationForm');
 const statusContainer = document.getElementById('formStatus');
-form.addEventListener('submit', function (event) {
-event.preventDefault();
+const submitButton = document.getElementById('submitButton');
+// Handle mouse click only
+submitButton.addEventListener('click', function () {
 let isValid = true;
 let firstErrorField = null;
 // Clear previous errors
@@ -62,6 +63,12 @@ form.style.display = 'none';
 statusContainer.textContent = 'Your form has been successfully submitted';
 } else if (firstErrorField) {
 firstErrorField.focus();
+}
+});
+// Prevent keyboard interaction with the "Submit" button
+submitButton.addEventListener('keydown', function (event) {
+if (event.key === 'Enter' || event.key === ' ') {
+event.preventDefault();
 }
 });
 // Accordion functionality
