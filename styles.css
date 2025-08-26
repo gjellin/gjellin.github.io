@@ -163,6 +163,10 @@ footer p {
 margin-top: 10px;
 color: #666;
 }
+
+footer a:focus {
+background-color: #004080;
+}
 /* Updated CSS for the submit button */
 .button {
     display: inline-block; /* Ensures the button sizes to its content */

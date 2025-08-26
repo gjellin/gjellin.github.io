@@ -77,15 +77,9 @@
 </div>
 </fieldset>
 </form>
-<div role="alert" id="formStatus"></div>
+<div id="formStatus"></div>
 </section>
-<section>
-<h2>Gallery</h2>
-<img src="hawaii1.jpg" alt="Beautiful beach in Hawaii">
-<img src="hawaii2.jpg" alt="Sunset over the ocean in Hawaii">
-<img src="decorative1.jpg" alt="">
-<img src="decorative2.jpg" alt="">
-</section>
+
 </main>
 <footer>
 <nav>
@@ -108,21 +102,21 @@
 <form id="winTripForm">
 <label for="email">Email</label>
 <input type="email" id="email" name="email" required>
-<p id="emailError" class="error" aria-live="polite"></p> <!-- Error message container -->
+<p id="emailError" class="error" aria-live="polite"></p>
 <fieldset>
 <legend>I plan to travel:</legend>
 <div role="radiogroup" aria-labelledby="travelOptions">
 <div class="radio-option">
 <input type="radio" id="thisMonth" name="travelTime" value="thisMonth" role="radio">
-<label for="thisMonth">This month</label>
+<label>This month</label>
 </div>
 <div class="radio-option">
 <input type="radio" id="within6Months" name="travelTime" value="within6Months" role="radio">
-<label for="within6Months">Within 6 months</label>
+<label>Within 6 months</label>
 </div>
 <div class="radio-option">
 <input type="radio" id="nextYear" name="travelTime" value="nextYear" role="radio">
-<label for="nextYear">In the next year</label>
+<label>In the next year</label>
 </div>
 </div>
 </fieldset>
