@@ -91,10 +91,15 @@ document.addEventListener('DOMContentLoaded', function () {
 const winTripButton = document.getElementById('winTripButton');
 const winTripModal = document.getElementById('winTripModal');
 const modalContent = winTripModal.querySelector('.modal-content');
+const closeModalButton = document.getElementById('closeModalButton');
 // Open the modal
 winTripButton.addEventListener('click', function () {
 winTripModal.setAttribute('aria-hidden', 'false');
 modalContent.focus(); // Set focus on the modal content
+});
+// Close the modal when clicking the close button
+closeModalButton.addEventListener('click', function () {
+winTripModal.setAttribute('aria-hidden', 'true');
 });
 // Close the modal when clicking outside the content
 winTripModal.addEventListener('click', function (event) {

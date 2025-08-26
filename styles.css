@@ -240,3 +240,30 @@ display: flex;
 flex-direction: column;
 gap: 10px;
 }
+
+css
+/* Close button styles */
+.close-button {
+    position: absolute;
+    top: 10px; /* Position it 10px from the top */
+    right: 10px; /* Position it 10px from the right */
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: #333;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #0056B3; /* Change color on hover for better interactivity */
+}
+/* Radio button alignment */
+.radio-option {
+display: flex;
+align-items: center; /* Aligns the radio button and label vertically */
+gap: 10px; /* Adds space between the radio button and label */
+margin-bottom: 10px; /* Adds spacing between radio options */
+}
+.radio-option input[type="radio"] {
+margin: 0; /* Removes default margin for better alignment */
+}
