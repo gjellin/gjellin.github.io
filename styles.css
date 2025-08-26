@@ -225,6 +225,7 @@ flex-direction: column;
 }
 .modal-content form label {
 margin-bottom: 5px;
+width: 100%;
 }
 .modal-content form input[type="email"] {
 margin-bottom: 20px;
@@ -264,5 +265,6 @@ margin-bottom: 10px; /* Adds spacing between radio options */
 }
 .radio-option input[type="radio"] {
 margin: 0; /* Removes default margin for better alignment */
+width: 20px;
 }
 /*end*/
