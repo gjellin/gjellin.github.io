@@ -1,128 +1,126 @@
 <!DOCTYPE html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Paradise Vacations</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paradise Vacations</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <div class="container">
 <header>
-<h1>Paradise Vacations</h1>
-<nav>
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="#">About</a></li>
-<li><a href="#">Contact</a></li>
-<li><button id="winTripButton" class="button">Win a Free Trip</button></li>
-</ul>
-</nav>
+    <h1>Paradise Vacations</h1>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><button id="winTripButton" class="button">Win a Free Trip</button></li>
+        </ul>
+    </nav>
 </header>
 <main>
-<p>Welcome to Paradise Vacations! Your dream vacation to Hawaii awaits. We offer the best packages for flights, accommodations, and activities to make your stay unforgettable. If you have any questions, feel free to <a href="#" class="text-link">contact us</a>.</p>
-<section>
-<h2>Vacation Details</h2>
-<div class="accordion">
-<h2>
-<button aria-expanded="false" aria-controls="panel1" id="accordion1">Flight Information</button>
-</h2>
-<div id="panel1" role="region" aria-labelledby="accordion1" hidden>
-<p>Details about flights to Hawaii.</p>
-</div>
-</div>
-<div class="accordion">
-<h2>
-<button aria-expanded="false" aria-controls="panel2" id="accordion2">Accommodation</button>
-</h2>
-<div id="panel2" role="region" aria-labelledby="accordion2" hidden>
-<p>Details about accommodations in Hawaii.</p>
-</div>
-</div>
-<div class="accordion">
-<h2>
-<button aria-expanded="false" aria-controls="panel3" id="accordion3">Activities</button>
-</h2>
-<div id="panel3" role="region" aria-labelledby="accordion3" hidden>
-<p>Details about activities in Hawaii.</p>
-</div>
-</div>
-</section>
-<section>
-<h2>Sign Up for Your Vacation</h2>
-<form id="vacationForm">
-<fieldset>
-<h1>Enter your Contact Information</h1>
-<div>
-<label for="firstName">First Name</label>
-<input type="text" id="firstName" name="firstName" aria-descrbedby="firstNameError">
-<span id="firstNameError" class="error" aria-live="polite"></span>
-</div>
-<div>
-<label for="lastName">Last Name</label>
-<input type="text" id="lastName" name="lastName" aria-describedby="lastNameError">
-<span id="lastNameError" class="error" aria-live="polite"></span>
-</div>
-<div>
-<label for="email">Email</label>
-<input type="text" id="email" name="email" aria-describedby="emailError">
-<span id="emailError" class="error" aria-live="polite"></span>
-</div>
-<div>
-<label for="phone">Phone</label>
-<input type="text" id="phone" name="phone" aria-describedby="phoneError">
-<span id="phoneError" class="error" aria-live="polite"></span>
-</div>
-<div role="button" id="submitButton" tabindex="0" class="button">
-    Submit
-</div>
-</fieldset>
-</form>
-<div id="formStatus"></div>
-</section>
-
+    <p>Welcome to Paradise Vacations! Your dream vacation to Hawaii awaits. We offer the best packages for flights, accommodations, and activities to make your stay unforgettable. If you have any questions, feel free to <a href="#" class="text-link">contact us</a>.</p>
+    <section>
+        <h2>Vacation Details</h2>
+        <div class="accordion">
+            <h2>
+                <button aria-expanded="false" aria-haspopup="true" aria-controls="panel1" id="accordion1">Flight Information</button>
+            </h2>
+            <div id="panel1" role="region" aria-labelledby="accordion1" hidden>
+                <p>Details about flights to Hawaii.</p>
+            </div>
+        </div>
+        <div class="accordion">
+            <h2>
+                <button aria-expanded="false" aria-haspopup="true" aria-controls="panel2" id="accordion2">Accommodation</button>
+            </h2>
+            <div id="panel2" role="region" aria-labelledby="accordion2" hidden>
+                <p>Details about accommodations in Hawaii.</p>
+            </div>
+        </div>
+        <div class="accordion">
+            <h2>
+                <button aria-expanded="false" aria-haspopup="true" aria-controls="panel3" id="accordion3">Activities</button>
+            </h2>
+            <div id="panel3" role="region" aria-labelledby="accordion3" hidden>
+                <p>Details about activities in Hawaii.</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>Sign Up for Your Vacation</h2>
+        <form id="vacationForm">
+            <fieldset>
+                <h1>Enter your Contact Information</h1>
+                <div>
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" aria-descrbedby="firstNameError">
+                    <span id="firstNameError" class="error" aria-live="polite"></span>
+                </div>
+                <div>
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" aria-describedby="lastNameError">
+                    <span id="lastNameError" class="error" aria-live="polite"></span>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" aria-describedby="emailError">
+                    <span id="emailError" class="error" aria-live="polite"></span>
+                </div>
+                <div>
+                    <label for="phone">Phone</label>
+                    <input type="text" id="phone" name="phone" aria-describedby="phoneError">
+                    <span id="phoneError" class="error" aria-live="polite"></span>
+                </div>
+                <div role="button" id="submitButton" tabindex="0" class="button">
+                    Submit
+                </div>
+            </fieldset>
+        </form>
+        <div id="formStatus"></div>
+    </section>
 </main>
 <footer>
-<nav>
-<ul>
-<li><a href="#">Contact</a></li>
-<li><a href="#">About</a></li>
-</ul>
-</nav>
+    <nav>
+        <ul>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
 <p>© 2023 Paradise Vacations. All rights reserved.</p>
 </footer>
 </div>
 
-
 <!-- Modal Dialog -->
-<div id="winTripModal" class="modal" role="modal" aria-hidden="true">
-<div class="modal-content" tabindex="-1">
-<button id="closeModalButton" class="close-button" aria-label="Close modal">&times;</button>
-<h2 id="modalHeading">Win a Free Trip</h2>
-<p>Enter your email address and select one of the options to win.</p>
-<form id="winTripForm">
-<label for="email">Email</label>
-<input type="email" id="email" name="email" required>
-<p id="emailError" class="error" aria-live="polite"></p>
-<fieldset>
-<legend>I plan to travel:</legend>
-<div role="radiogroup" aria-labelledby="travelOptions">
-<div class="radio-option">
-<input type="radio" id="thisMonth" name="travelTime" value="thisMonth" role="radio">
-<label>This month</label>
-</div>
-<div class="radio-option">
-<input type="radio" id="within6Months" name="travelTime" value="within6Months" role="radio">
-<label>Within 6 months</label>
-</div>
-<div class="radio-option">
-<input type="radio" id="nextYear" name="travelTime" value="nextYear" role="radio">
-<label>In the next year</label>
-</div>
-</div>
-</fieldset>
-<button type="submit" class="button">Submit</button>
-</form>
-</div>
+<div id="winTripModal" class="modal" role="modal" aria-hidden="false">
+    <div class="modal-content" tabindex="-1">
+        <button id="closeModalButton" class="close-button" aria-label="Close modal">&times;</button>
+        <h2 id="modalHeading">Win a Free Trip</h2>
+        <p>Enter your email address and select one of the options to win.</p>
+        <form id="winTripForm">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <p id="emailError" class="error" aria-live="polite"></p>
+            <fieldset>
+                <legend>I plan to travel:</legend>
+                <div role="radiogroup" aria-labelledby="travelOptions">
+                    <div class="radio-option">
+                        <input type="radio" id="thisMonth" name="travelTime" value="thisMonth" role="radio">
+                        <label>This month</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="within6Months" name="travelTime" value="within6Months" role="radio">
+                        <label>Within 6 months</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="nextYear" name="travelTime" value="nextYear" role="radio">
+                        <label>In the next year</label>
+                    </div>
+                </div>
+            </fieldset>
+            <button type="submit" class="button">Submit</button>
+        </form>
+    </div>
 </div>
 
 <script src="scripts.js"></script>
