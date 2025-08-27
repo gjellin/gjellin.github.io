@@ -117,8 +117,8 @@ winTripModal.setAttribute('aria-hidden', 'true');
 
 document.addEventListener('DOMContentLoaded', function () {
 const form = document.getElementById('winTripForm');
-const emailInput = document.getElementById('email');
-const emailError = document.getElementById('emailError');
+const emailInput = document.getElementById('email2');
+const emailError = document.getElementById('emailError2');
 // Prevent form submission if email is invalid
 form.addEventListener('submit', function (event) {
 const emailValue = emailInput.value.trim(); // Trim whitespace
