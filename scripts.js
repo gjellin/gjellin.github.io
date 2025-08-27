@@ -115,3 +115,29 @@ winTripModal.setAttribute('aria-hidden', 'true');
 });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+const form = document.getElementById('winTripForm');
+const emailInput = document.getElementById('email2');
+const emailError = document.getElementById('emailError2');
+// Prevent form submission if email is invalid
+form.addEventListener('submit', function (event) {
+const emailValue = emailInput.value.trim(); // Trim whitespace
+if (!emailValue) {
+// If the email field is empty
+emailError.textContent = 'Email is incomplete';
+emailError.style.color = 'red'; // Ensure the error text is red
+emailInput.style.border = '2px solid red'; // Add red border to the input
+event.preventDefault(); // Prevent form submission
+} else if (!emailValue.includes('@') || !emailValue.includes('.')) {
+// If the email is missing "@" or "."
+emailError.textContent = 'Email is invalid';
+emailError.style.color = 'red'; // Ensure the error text is red
+emailInput.style.border = '2px solid red'; // Add red border to the input
+event.preventDefault(); // Prevent form submission
+} else {
+// If the email is valid, clear the error message and reset the border
+emailError.textContent = '';
+emailInput.style.border = ''; // Reset the border to default
+}
+});
+});
