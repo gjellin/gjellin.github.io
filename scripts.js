@@ -116,25 +116,34 @@ winTripModal.setAttribute('aria-hidden', 'true');
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-const form = document.getElementById('winTripForm');
-const emailInput = document.getElementById('email2');
-const emailError = document.getElementById('emailError2');
+const form2 = document.getElementById('winTripForm');
+
 // Prevent form submission if email is invalid
-form.addEventListener('submit', function (event) {
-const emailValue = emailInput.value.trim(); // Trim whitespace
-if (!emailValue) {
-// If the email field is empty
-emailError.textContent = 'Email is incomplete';
-emailError.style.color = 'red'; // Ensure the error text is red
-event.preventDefault(); // Prevent form submission
-} else if (!emailValue.includes('@') || !emailValue.includes('.')) {
-// If the email is missing "@" or "."
-emailError.textContent = 'Email is invalid';
-emailError.style.color = 'red'; // Ensure the error text is red
-event.preventDefault(); // Prevent form submission
-} else {
-// If the email is valid, clear the error message
-emailError.textContent = '';
+form2.addEventListener('submit', function (event) {
+    let isValid2 = true;
+    let firstErrorField2 = null;
+    // Clear previous errors
+    document.querySelectorAll('.error').forEach(function (error) {
+    error.textContent = '';
+    });
+    document.querySelectorAll('input').forEach(function (input) {
+    input.style.border = '';
+});
+
+// Validate Email
+const email2 = document.getElementById('email2');
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (email2.value.trim() === '') {
+isValid2 = false;
+document.getElementById('emailError2').textContent = 'Email is incomplete';
+email2.style.border = '2px solid red';
+if (!firstErrorField2) firstErrorField2 = email2;
+} else if (!emailPattern.test(email.value.trim())) {
+isValid = false;
+document.getElementById('emailError2').textContent = 'Email is invalid';
+email.style.border = '2px solid red';
+if (!firstErrorField2) firstErrorField2 = email2;
 }
+
 });
 });
