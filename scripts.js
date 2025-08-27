@@ -116,32 +116,25 @@ winTripModal.setAttribute('aria-hidden', 'true');
 });
 
 document.addEventListener('DOMContentLoaded', function () {
+const form = document.getElementById('winTripForm');
 const emailInput = document.getElementById('email');
 const emailError = document.getElementById('emailError');
-const form = document.getElementById('winTripForm');
-// Validate email on input
-emailInput.addEventListener('input', function () {
-const emailValue = emailInput.value;
+// Prevent form submission if email is invalid
+form.addEventListener('submit', function (event) {
+const emailValue = emailInput.value.trim(); // Trim whitespace
 if (!emailValue) {
 // If the email field is empty
 emailError.textContent = 'Email is incomplete';
+emailError.style.color = 'red'; // Ensure the error text is red
+event.preventDefault(); // Prevent form submission
 } else if (!emailValue.includes('@') || !emailValue.includes('.')) {
 // If the email is missing "@" or "."
 emailError.textContent = 'Email is invalid';
+emailError.style.color = 'red'; // Ensure the error text is red
+event.preventDefault(); // Prevent form submission
 } else {
-// If the email is valid
+// If the email is valid, clear the error message
 emailError.textContent = '';
-}
-});
-// Prevent form submission if email is invalid
-form.addEventListener('submit', function (event) {
-const emailValue = emailInput.value;
-if (!emailValue) {
-emailError.textContent = 'Email is incomplete';
-event.preventDefault(); // Prevent form submission
-} else if (!emailValue.includes('@') || !emailValue.includes('.')) {
-emailError.textContent = 'Email is invalid';
-event.preventDefault(); // Prevent form submission
 }
 });
 });
