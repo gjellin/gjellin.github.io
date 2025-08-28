@@ -115,12 +115,13 @@ winTripModal.setAttribute('aria-hidden', 'true');
 });
 });
 
-document.addEventListener('DOMContentLoaded', function () {    alert('test');
+document.addEventListener('DOMContentLoaded', function () {
 const form = document.getElementById('winTripForm');
 const emailInput = document.getElementById('email2');
 const emailError = document.getElementById('emailError2');
-// Prevent form submission if email is invalid
-form.addEventListener('submit', function (event) {
+const submitButton2 = document.getElementById('submitButton2');
+// Handle mouse click only
+submitButton2.addEventListener('click', function (){
 
 const emailValue = emailInput.value.trim(); // Trim whitespace
 if (!emailValue) {
