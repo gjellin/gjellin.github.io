@@ -1,8 +1,7 @@
 document.getElementById('submitButton').addEventListener('click', function() {
     alert('test');
-const iframe = document.getElementById('liveRegionIframe');
-const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-const liveRegion = iframeDocument.getElementById('liveRegion');
+
+const liveRegion = documentument.getElementById('liveRegion');
 const randomWords = generateRandomWords(3);
 liveRegion.textContent = randomWords.join(' ');
 });
