@@ -1,3 +1,4 @@
+javascript
 function generateRandomWords(num) {
 const words = [
 'apple', 'banana', 'cherry', 'date', 'elderberry', 'fig', 'grape', 'honeydew', 'kiwi', 'lemon',
@@ -17,7 +18,7 @@ const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
 const submitButton = iframeDocument.getElementById('submitButton');
 const liveRegion = iframeDocument.getElementById('liveRegion');
 submitButton.addEventListener('click', function() {
-const randomWords = generateRandomWords(3);
+const randomWords = generateRandomWords(10);
 liveRegion.innerHTML = `<pre tabindex="-1">${randomWords.join(' ')}</pre>`;
 });
 };
