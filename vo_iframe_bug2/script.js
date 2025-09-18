@@ -1,19 +1,5 @@
-document.getElementById('submitButton').addEventListener('click', function() {
-const iframe = document.getElementById('liveRegionIframe');
-const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-const liveRegion = iframeDocument.getElementById('liveRegion');
-const randomWords = generateRandomWords(3);
-liveRegion.textContent = randomWords.join(' ');
-});
-function generateRandomWords(num) {
-const words = [
-'apple', 'banana', 'cherry', 'date', 'elderberry', 'fig', 'grape', 'honeydew', 'kiwi', 'lemon',
-'mango', 'nectarine', 'orange', 'papaya', 'quince', 'raspberry', 'strawberry', 'tangerine', 'ugli', 'vanilla'
-];
-let randomWords = [];
-for (let i = 0; i < num; i++) {
-const randomIndex = Math.floor(Math.random() * words.length);
-randomWords.push(words[randomIndex]);
-}
-return randomWords;
-}
+ document.getElementById('updateButton').addEventListener('click', function() {
+          const randomWords = ['apple', 'banana', 'cherry', 'date', 'elderberry', 'fig', 'grape'];
+          const shuffledWords = randomWords.sort(() => 0.5 - Math.random()).slice(0, 3).join(' ');
+          document.getElementById('liveRegion').textContent = shuffledWords;
+        });
