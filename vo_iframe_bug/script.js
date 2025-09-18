@@ -2,7 +2,7 @@ document.getElementById('submitButton').addEventListener('click', function() {
 const iframe = document.getElementById('liveRegionIframe');
 const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
 const liveRegion = iframeDocument.getElementById('liveRegion');
-const randomWords = generateRandomWords(10);
+const randomWords = generateRandomWords(3);
 liveRegion.textContent = randomWords.join(' ');
 });
 function generateRandomWords(num) {
