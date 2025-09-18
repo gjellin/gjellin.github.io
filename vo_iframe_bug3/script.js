@@ -1,7 +1,7 @@
 document.getElementById('submitButton').addEventListener('click', function() {
     alert('test');
 
-const liveRegion = documentument.getElementById('liveRegion');
+const liveRegion = document.getElementById('liveRegion');
 const randomWords = generateRandomWords(3);
 liveRegion.textContent = randomWords.join(' ');
 });
