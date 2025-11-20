@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML 5 Boilerplate</title>
     <link rel="stylesheet" href="style.css">
-    <script>const iframe = document.querySelector("iframe");
-
-iframe.document.querySelector("body").style.color = "red";</script>
+    <script>
+      window.onload = function() {
+        const iframe = document.querySelector("iframe");
+        iframe.document.querySelector("body").style.color = "red";</script>
+    }
   </head>
   <body>
     <h1>iframe test</h1>
