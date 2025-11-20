@@ -7,9 +7,9 @@
     <title>HTML 5 Boilerplate</title>
     <link rel="stylesheet" href="style.css">
     <script>
-     window.onload = function() {
-    // Get the iframe element
-    var iframe = document.getElementById('myIframe');
+    window.onload = function() {
+    // Get the first iframe element on the page
+    var iframe = document.querySelector('iframe');
 
     // Check if the iframe and its content are accessible
     if (iframe && iframe.contentWindow && iframe.contentDocument) {
