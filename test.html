@@ -7,10 +7,21 @@
     <title>HTML 5 Boilerplate</title>
     <link rel="stylesheet" href="style.css">
     <script>
-      window.onload = function() {
-        const iframe = document.querySelector("iframe");
-        iframe.document.querySelector("body").style.color = "red";
+     window.onload = function() {
+    // Get the iframe element
+    var iframe = document.getElementById('myIframe');
+
+    // Check if the iframe and its content are accessible
+    if (iframe && iframe.contentWindow && iframe.contentDocument) {
+        // Access the iframe's document
+        var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+        // Change the text color to red
+        iframeDoc.body.style.color = 'red';
+    } else {
+        console.error('Unable to access the iframe content.');
     }
+};
     </script>
   </head>
   <body>
@@ -21,7 +32,7 @@ The WCAG documents explain how to make web content more accessible to people wit
 
 natural information such as text, images, and sounds
 code or markup that defines structure, presentation, etc.
-<iframe src="iframeContent.html" width="600" height="400"></iframe>
+<iframe src="iframeContent.html" width="600" height="400" id="myIframe"></iframe>
   </body>
 </html>
 
