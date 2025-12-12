@@ -3,6 +3,7 @@ var iframe = document.querySelector('iframe');
 
 // Ensure the iframe is loaded before accessing its content
 iframe.onload = function() {
+    alert('test');
     // Access the iframe's document
     var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
 
@@ -16,3 +17,4 @@ iframe.onload = function() {
         console.log('Textarea not found');
     }
 };
+
