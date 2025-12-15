@@ -4,28 +4,53 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Describedby testing</title>
+<style>
+    .cont {
+        width: 500px;
+        border: 1px solid black;
+        margin-bottom: 50px;
+    }
+</style>
 
 </head>
 <body>
 
     <button>Focus</button>
-    <div id="fname">First Name</div>
-    <input class="slds-input" part="input" lwc-enmikoh2qu="" id="input-232" maxlength="255" name="textabove" required="" step="any" type="text" aria-describedby="desc1" aria-labelledby="fname" aria-invalid="true">
-    <div id="desc1">Error 1</div>
 
-    <table lwc-392cvb27u8q="" class="slds-table slds-table_header-fixed slds-table_bordered slds-table_edit slds-table_resizable-cols" style="table-layout: fixed;width: 1087px;" role="grid" aria-labelledby="null-233 flowruntime_datatable_info_message_display-233" data-num-rows="12" data-num-selected-rows="0" aria-describedby="desc2">
-    <thead>
-        <tr>
-            <th>Name</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                <input lwc-3i8l3ur8gta="" type="radio" name="lgt-datatable-7-options" id="primitive-checkbox-radio-id-244" tabindex="-1" data-navigation="enable" data-action-triggers="space" aria-labelledby="radioLabel"><label for="radio1" id="radioLabel"> radio label</label></td>
-        </tr>
-    </tbody>
+    <div class="cont">
+
+        <h2>Basic Input Test</h2>
+        <div id="fname">First Name</div>
+        <input class="slds-input" part="input" lwc-enmikoh2qu="" id="input-232" maxlength="255" name="textabove" required="" step="any" type="text" aria-describedby="desc1" aria-labelledby="fname" aria-invalid="true">
+        <div id="desc1">Error 1</div>
+
+    </div>
+
+    <div class="cont">
+
+        <h2>Table Test</h2>
+        <table lwc-392cvb27u8q="" class="slds-table slds-table_header-fixed slds-table_bordered slds-table_edit slds-table_resizable-cols" style="table-layout: fixed;width: 1087px;" role="grid" aria-labelledby="null-233 flowruntime_datatable_info_message_display-233" data-num-rows="12" data-num-selected-rows="0" aria-describedby="desc2">
+        <thead>
+            <tr>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <input lwc-3i8l3ur8gta="" type="radio" name="lgt-datatable-7-options" id="radioLabel" data-navigation="enable" data-action-triggers="space" aria-labelledby="radioLabel"><label for="radio1" id="radioLabel"> radio label</label></td>
+            </tr>
+        </tbody>
         </table>
         <div id="desc2">error 2</div>
+    </div>
+    <div class="cont">
+
+        <fieldset>
+            <legend>Radio group Test</legend>
+            <input aria-describedby="desc3" lwc-3i8l3ur8gta="" type="radio" name="lgt-datatable-7-options" id="radioLabel2" data-navigation="enable" data-action-triggers="space" aria-labelledby="radioLabel2"><label for="radio2" id="radioLabel2"> radio label 2</label>
+        </fieldset>
+         <div id="desc3">error 2</div>
+    </div>
 </body>
 </html>
