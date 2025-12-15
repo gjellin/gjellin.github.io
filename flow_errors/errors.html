@@ -42,16 +42,26 @@
             </tr>
         </tbody>
         </table>
-        <div id="desc2">error 2</div>
+        <div id="desc2">error 3</div>
     </div>
     <div class="cont">
 
-        <fieldset>
+        <fieldset aria-describedby="desc4">
             <legend>Radio group Test</legend>
+            <input   type="radio" name="rg2" id="radioLabel3"  aria-labelledby="radioLabel3">
+            <label for="radio3" id="radioLabel3"> radio label 3</label>
+        </fieldset>
+         <div id="desc4">error 4</div>
+    </div>
+
+    <div class="cont">
+
+        <fieldset>
+            <legend>Radio group Test 2</legend>
             <input aria-describedby="desc3"  type="radio" name="rg2" id="radioLabel2"  aria-labelledby="radioLabel2">
             <label for="radio2" id="radioLabel2"> radio label 2</label>
         </fieldset>
-         <div id="desc3">error 2</div>
+         <div id="desc4">error 2</div>
     </div>
 </body>
 </html>
