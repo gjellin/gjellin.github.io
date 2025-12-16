@@ -51,7 +51,7 @@
         <fieldset>
             <legend>Radio group Test 1</legend>
             <p>Using fieldset with error ref on radio button</p>
-            <input  aria-describedby="desc3"  type="radio" name="rg2" id="radioLabel3"  aria-labelledby="radioLabel3">
+            <input  aria-describedby="desc3"  type="radio" name="rg3" id="radioLabel3"  aria-labelledby="radioLabel3">
             <label for="radio3" id="radioLabel3"> radio label</label>
         </fieldset>
          <div id="desc3">error 3</div>
@@ -62,10 +62,33 @@
         <fieldset aria-describedby="desc4">
             <legend>Radio group Test 2</legend>
             <p>Using fieldset with error ref on fieldset tag</p>
-            <input   type="radio" name="rg3" id="radioLabel2"  aria-labelledby="radioLabel2">
+            <input   type="radio" name="rg2" id="radioLabel2"  aria-labelledby="radioLabel2">
             <label for="radio2" id="radioLabel2"> radio label 3</label>
         </fieldset>
          <div id="desc4">error 4</div>
     </div>
+
+
+    <div class="cont">
+        <fieldset aria-describedby="desc5">
+            <legend>Table Test 2</legend>
+            <p>Table nested in a fieldset with error ref on fieldset</p>
+            <table lwc-392cvb27u8q="" border="1" class="slds-table slds-table_header-fixed slds-table_bordered slds-table_edit slds-table_resizable-cols" style="table-layout: fixed;width: 1087px;" role="grid" aria-labelledby="null-233 flowruntime_datatable_info_message_display-233" data-num-rows="12" data-num-selected-rows="0" >
+            <thead>
+                <tr>
+                    <th align="left">Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input lwc-3i8l3ur8gta="" type="radio" name="rg4" id="radio4" data-navigation="enable" data-action-triggers="space" aria-labelledby="radioLabel4"><label for="radio4" id="radioLabel4"> radio label</label></td>
+                </tr>
+            </tbody>
+            </table>
+            <div id="desc5">error 5</div>
+        </fieldset>
+    </div>
+    <div class="cont">
 </body>
 </html>
